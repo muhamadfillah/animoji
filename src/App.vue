@@ -1,63 +1,59 @@
 <template>
-  <body>
+    <body>
     <div id="app" class="container">
         <header>
+            <div class="container header-content">
                 <h1 class="text-center">Animoji 🐿</h1>
                 <div class="row">
                     <div class="col-md-8">
-                        <cardHeader/>            
+                        <cardHeader/>
                     </div>
                     <div class="col-md-4">
-                      <cardContribute/>
+                        <cardContribute/>
                     </div>
                 </div>
-      </header>
-      <router-view/>
-        <hr class="separator">
+            </div>
+        </header>
+        <router-view/>
         <footer>
-           <footerContent/>
+            <footerContent/>
         </footer>
-      </div>
-       <backToTop/>
-  </body>
+    </div>
+    <backToTop/>
+    </body>
 </template>
+
 <script>
-import footerContent from '@/components/footerContent'
-import cardHeader from '@/components/cardHeader'
-import cardContribute from '@/components/cardContributor'
-import backToTop from '@/components/backToTop'
+import backToTop from '@/components/backToTop';
+import cardHeader from '@/components/cardHeader';
+import footerContent from '@/components/footerContent';
+import cardContribute from '@/components/cardContributor';
 
 export default {
-  components:{
-    footerContent,
-    cardHeader,
-    cardContribute,
-    backToTop
-  },created () {
-    document.title = "Animoji 🐿";
-  }
-}
+    components: {
+        footerContent,
+        cardHeader,
+        cardContribute,
+        backToTop,
+    }, created() {
+        document.title = "Animoji 🐿";
+    },
+};
 </script>
+
 <style>
-@import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
-    header h1{
+    @import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
+    @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+    header h1 {
         font-family: 'Mansalva', cursive;
-        font-size: 8rem;
-        padding-bottom: 30px;
-        padding-top: 10px;
-        color:white;
-        text-shadow: 0 0 10px #f545; /* horizontal-offset vertical-offset 'blur' colour */
-        user-select: none;
+        font-size: 1.62rem;
+        padding: 1.87rem;
+        color: #fff;
+        text-shadow: 0 0 10px #f545;
     }
 
-    .separator{
-       border: 1px solid white;
-    }
-
-    @media only screen and (max-width: 1199px) {
-      header h1 {
-          padding-top: 25px;
-          font-size: 17vw;
-      }
+    .header-content {
+        margin-bottom: 2.5rem;
     }
 </style>
